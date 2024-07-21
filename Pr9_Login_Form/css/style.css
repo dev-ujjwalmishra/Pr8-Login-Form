@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --gray-100: #f2f2f2;
+    --white: #fff;
+    --violet-500: #4158d0;
+    --purple-500: #c850c0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.container{
+    height: 100vh;
+    background-color: var(--gray-100);
+    display: grid;
+    place-items: center;
+    padding: 25px;
+}
+
+.form-container{
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .title{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    background: linear-gradient( -135deg, var(--violet-500), var(--purple-500));
+    padding: 20px;
+}
+
+.form-container form{
+    padding: 20px 20px 50px 20px;
+    background-color: var(--white);
+}
+
+form .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 35px;
+    outline: none;
+}
+
+.field input[type="email"],
+.field input[type="password"]{
+    padding-left: 20px;
+}
+
+.field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: gray;
+    pointer-events: none;
+    transition: all 0.2s ease-in;
+}
+
+.field input:focus{
+    border: 1px solid var(--violet-500);
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label{
+    top: 0;
+    font-size: 14px;
+    color: var(--violet-500);
+}
+
+.link-field{
+    margin-top: -5px;
+    padding: 0 20px;
+}
+
+
+.link-field a{
+    text-decoration: none;
+    color: var(--violet-500);
+    padding-left: 3px;
+}
+
+.link-field a:hover{
+    text-decoration: underline;
+}
+
+.f-pass{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.btn-field{
+    margin-top: 20px;
+}
+
+.field input[type="button"]{
+    background: linear-gradient(-135deg, var(--violet-500), var(--purple-500));
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.field input[type="button"]:active{
+    transform: scale(0.9);
+}
+
+
+.link-field.txt-center{
+    margin-top: 20px;
+    text-align: center;
+}
